@@ -14,33 +14,38 @@ class Calculator
 
     public function __construct($data)
     {
-//        echo is_array($data) ? 'Is Array' : 'Single Variable';
+        /* echo is_array($data) ? 'Is Array' : 'Single Variable'; */
 
-        $this->firstNumber  = 10;
-        $this->secondNumber = 20;
-        $this->operator     = '-';
+        $this->firstNumber  = $data['first_number'];
+        $this->secondNumber = $data['second_number'];
+        $this->operator     = $data['operator'];
     }
 
     public function index() {
         switch ($this->operator)
         {
             case '+' :
-                echo $this->add();
+                $this->result = $this->add();
                 break;
             case '-' :
-                echo $this->sub();
+                $this->result = $this->sub();
                 break;
             case '/' :
-                echo $this->division();
+                $this->result = $this->division();
                 break;
             case '*' :
-                echo $this->multiplication();
+                $this->result = $this->multiplication();
+                break;
+            case '%' :
+                $this->result = $this->mod();
                 break;
 
             default:
                 break;
 
         }
+
+        return $this->result;
     }
 
     protected function add() {
@@ -55,6 +60,9 @@ class Calculator
     }
     protected function division () {
         return $this->firstNumber / $this->secondNumber;
+    }
+    protected function mod () {
+        return $this->firstNumber % $this->secondNumber;
     }
 
 
