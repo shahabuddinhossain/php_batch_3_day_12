@@ -6,13 +6,24 @@ namespace App\classes;
 
 class Calculator
 {
-    public $firstNumber;
-    public $SecondNumber;
-    public $operator;
-    public $result;
+    public    $firstNumber  = 10;
+    protected $secondNumber = 20;
+    private   $operator     = 30;
+    public    $result;
 
     public function index() {
-        echo 'Hello World';
+        echo $this->firstNumber;
+        echo $this->secondNumber;
+        echo $this->operator;
+
+    }
+
+    protected function one() {
+        echo 'In One';
+    }
+
+    private function two () {
+        echo 'In Two';
     }
 
 }
