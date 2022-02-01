@@ -46,6 +46,17 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group row">
+                                    <label for="" class="col-form-label col-md-3">Select Action</label>
+                                    <div class="col-md-9">
+                                        <label for=""> <input type="radio" name="operator" value="+">Summation</label>
+                                        <label for=""> <input type="radio" name="operator" value="-">Subtraction</label>
+                                        <label for=""> <input type="radio" name="operator" value="*">Multiplication</label>
+                                        <label for=""> <input type="radio" name="operator" value="/">Division</label>
+                                        <label for=""> <input type="radio" name="operator" value="%">Modulation</label>
+                                    </div>
+                                </div>
+
 
 
                                 <div class="form-group row">
@@ -57,11 +68,7 @@
                                 <div class="form-group row">
                                     <label for="" class="col-form-label col-md-3"></label>
                                     <div class="col-md-9">
-                                        <input type="submit" class="btn btn-outline-success" value="+" name="operator"/>
-                                        <input type="submit" class="btn btn-outline-success" value="-" name="operator"/>
-                                        <input type="submit" class="btn btn-outline-success" value="*" name="operator"/>
-                                        <input type="submit" class="btn btn-outline-success" value="/" name="operator"/>
-                                        <input type="submit" class="btn btn-outline-success" value="%" name="operator"/>
+                                        <input type="submit" class="btn btn-outline-success" value="submit" name="submit"/>
                                     </div>
                                 </div>
 
