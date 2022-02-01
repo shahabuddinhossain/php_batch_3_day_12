@@ -24,5 +24,6 @@
 require_once 'vendor/autoload.php';
 use App\classes\Calculator;
 
-$calculator = new Calculator();
+$calculator = new Calculator(['10','20','BITM',20,400,5444,4545,6465,56,56]);
 $calculator->index();
+
